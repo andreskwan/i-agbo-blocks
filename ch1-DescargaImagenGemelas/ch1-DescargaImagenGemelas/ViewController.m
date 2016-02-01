@@ -28,22 +28,21 @@
 
     // permitir que se modifique dentro del bloque y quede disponible fuera de el
     __block NSData *imageData = nil;
+    __block UIImage * image = nil;
+    
     // crear una cola
     dispatch_queue_t gemelas = dispatch_queue_create("colaDavalos", 0);
 
     // enviar un bloque que se ejecute en 2do plano
     dispatch_async(gemelas, ^{
         NSURL *url = [NSURL URLWithString:@"http://i.imgbox.com/abt638ka"];
-        
         imageData = [NSData dataWithContentsOfURL:url];
+        
+        //presentar en primer plano o en la cola principal
+        dispatch_async(dispatch_get_main_queue(), ^{
+            image = [UIImage imageWithData:imageData];
+            self.photoView.image = image;
+        });
     });
-    //imageData solo existe dentro del bloque, debe crearse una referencia
-    //porfuera del bloque, dentro del bloque se asigna la data, pero queda
-    //disponible fuera del bloque.
-    UIImage * image = [UIImage imageWithData:imageData];
-    
-    //debo presentar la imagen en el hilo principal
-    
-    self.photoView.image = image;
 }
 @end
