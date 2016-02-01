@@ -25,5 +25,12 @@
 }
 
 - (IBAction)downloadImage:(UIButton *)sender {
+    NSURL *url = [NSURL URLWithString:@"http://cdn.playbuzz.com/cdn/47169acc-3907-48cb-88fb-c13f98a556ad/52405eb3-f4d7-4ce1-93d0-d0c807bd9764.jpg"];
+    
+    NSData *imageData = [NSData dataWithContentsOfURL:url];
+    
+    UIImage * image = [UIImage imageWithData:imageData];
+    
+    self.photoView.image = image;
 }
 @end

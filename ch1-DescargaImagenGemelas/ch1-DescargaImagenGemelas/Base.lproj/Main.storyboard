@@ -17,18 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lb9-e4-bRL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ID-3x-eDb">
-                                <rect key="frame" x="125" y="518" width="71" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ID-3x-eDb">
+                                <rect key="frame" x="125" y="20" width="71" height="30"/>
                                 <state key="normal" title="Descargar"/>
                                 <connections>
                                     <action selector="downloadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wTd-kK-0ny"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lb9-e4-bRL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2ID-3x-eDb" secondAttribute="bottom" constant="518" id="CdP-D6-mEt"/>
+                            <constraint firstItem="lb9-e4-bRL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QVK-Zd-Htr"/>
+                            <constraint firstItem="2ID-3x-eDb" firstAttribute="centerX" secondItem="lb9-e4-bRL" secondAttribute="centerX" id="Te1-Mc-4wS"/>
+                            <constraint firstItem="lb9-e4-bRL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dlc-Jk-OGw"/>
+                            <constraint firstItem="lb9-e4-bRL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="srT-AW-iI3"/>
+                            <constraint firstItem="2ID-3x-eDb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xYh-FJ-0ic"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="photoView" destination="lb9-e4-bRL" id="wWe-NW-flO"/>
