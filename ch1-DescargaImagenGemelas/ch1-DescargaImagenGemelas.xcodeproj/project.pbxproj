@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA31183B1C5F7E5F0074D7ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA31183A1C5F7E5F0074D7ED /* main.m */; };
+		EA31183E1C5F7E5F0074D7ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA31183D1C5F7E5F0074D7ED /* AppDelegate.m */; };
+		EA3118411C5F7E5F0074D7ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3118401C5F7E5F0074D7ED /* ViewController.m */; };
+		EA3118441C5F7E5F0074D7ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA3118421C5F7E5F0074D7ED /* Main.storyboard */; };
+		EA3118461C5F7E5F0074D7ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3118451C5F7E5F0074D7ED /* Assets.xcassets */; };
+		EA3118491C5F7E5F0074D7ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA3118471C5F7E5F0074D7ED /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EA3118361C5F7E5F0074D7ED /* ch1-DescargaImagenGemelas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ch1-DescargaImagenGemelas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA31183A1C5F7E5F0074D7ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA31183C1C5F7E5F0074D7ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA31183D1C5F7E5F0074D7ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA31183F1C5F7E5F0074D7ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EA3118401C5F7E5F0074D7ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA3118431C5F7E5F0074D7ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA3118451C5F7E5F0074D7ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA3118481C5F7E5F0074D7ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA31184A1C5F7E5F0074D7ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA3118331C5F7E5F0074D7ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA31182D1C5F7E5F0074D7ED = {
+			isa = PBXGroup;
+			children = (
+				EA3118381C5F7E5F0074D7ED /* ch1-DescargaImagenGemelas */,
+				EA3118371C5F7E5F0074D7ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA3118371C5F7E5F0074D7ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA3118361C5F7E5F0074D7ED /* ch1-DescargaImagenGemelas.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA3118381C5F7E5F0074D7ED /* ch1-DescargaImagenGemelas */ = {
+			isa = PBXGroup;
+			children = (
+				EA31183C1C5F7E5F0074D7ED /* AppDelegate.h */,
+				EA31183D1C5F7E5F0074D7ED /* AppDelegate.m */,
+				EA31183F1C5F7E5F0074D7ED /* ViewController.h */,
+				EA3118401C5F7E5F0074D7ED /* ViewController.m */,
+				EA3118421C5F7E5F0074D7ED /* Main.storyboard */,
+				EA3118451C5F7E5F0074D7ED /* Assets.xcassets */,
+				EA3118471C5F7E5F0074D7ED /* LaunchScreen.storyboard */,
+				EA31184A1C5F7E5F0074D7ED /* Info.plist */,
+				EA3118391C5F7E5F0074D7ED /* Supporting Files */,
+			);
+			path = "ch1-DescargaImagenGemelas";
+			sourceTree = "<group>";
+		};
+		EA3118391C5F7E5F0074D7ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA31183A1C5F7E5F0074D7ED /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA3118351C5F7E5F0074D7ED /* ch1-DescargaImagenGemelas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA31184D1C5F7E5F0074D7ED /* Build configuration list for PBXNativeTarget "ch1-DescargaImagenGemelas" */;
+			buildPhases = (
+				EA3118321C5F7E5F0074D7ED /* Sources */,
+				EA3118331C5F7E5F0074D7ED /* Frameworks */,
+				EA3118341C5F7E5F0074D7ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ch1-DescargaImagenGemelas";
+			productName = "ch1-DescargaImagenGemelas";
+			productReference = EA3118361C5F7E5F0074D7ED /* ch1-DescargaImagenGemelas.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA31182E1C5F7E5F0074D7ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Kwan-abgo-jedy";
+				TargetAttributes = {
+					EA3118351C5F7E5F0074D7ED = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = EA3118311C5F7E5F0074D7ED /* Build configuration list for PBXProject "ch1-DescargaImagenGemelas" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA31182D1C5F7E5F0074D7ED;
+			productRefGroup = EA3118371C5F7E5F0074D7ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA3118351C5F7E5F0074D7ED /* ch1-DescargaImagenGemelas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA3118341C5F7E5F0074D7ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA3118491C5F7E5F0074D7ED /* LaunchScreen.storyboard in Resources */,
+				EA3118461C5F7E5F0074D7ED /* Assets.xcassets in Resources */,
+				EA3118441C5F7E5F0074D7ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA3118321C5F7E5F0074D7ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA3118411C5F7E5F0074D7ED /* ViewController.m in Sources */,
+				EA31183E1C5F7E5F0074D7ED /* AppDelegate.m in Sources */,
+				EA31183B1C5F7E5F0074D7ED /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA3118421C5F7E5F0074D7ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA3118431C5F7E5F0074D7ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA3118471C5F7E5F0074D7ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA3118481C5F7E5F0074D7ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA31184B1C5F7E5F0074D7ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA31184C1C5F7E5F0074D7ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA31184E1C5F7E5F0074D7ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ch1-DescargaImagenGemelas/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kwan.ch1-DescargaImagenGemelas";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA31184F1C5F7E5F0074D7ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ch1-DescargaImagenGemelas/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kwan.ch1-DescargaImagenGemelas";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA3118311C5F7E5F0074D7ED /* Build configuration list for PBXProject "ch1-DescargaImagenGemelas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA31184B1C5F7E5F0074D7ED /* Debug */,
+				EA31184C1C5F7E5F0074D7ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA31184D1C5F7E5F0074D7ED /* Build configuration list for PBXNativeTarget "ch1-DescargaImagenGemelas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA31184E1C5F7E5F0074D7ED /* Debug */,
+				EA31184F1C5F7E5F0074D7ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA31182E1C5F7E5F0074D7ED /* Project object */;
+}

@@ -9,19 +9,19 @@
 #import <Foundation/Foundation.h>
 
 void testMethod() {
-    __block int anInteger = 42;
+    int anInteger = 42;
     /* 
      * returns nothing
      * parameters none/void
      */
     void (^counter1)(void) = ^{
-        NSLog(@"\nClosure - Integer is: %d", anInteger);
-        anInteger++;
+        NSLog(@"\nClosure - Integer is: %d", anInteger + 1);
+//        anInteger++;
     };
     
     void (^counter2)(void) = ^{
-        NSLog(@"\nClosure - Integer is: %d", anInteger);
-        anInteger++;
+        NSLog(@"\nClosure - Integer is: %d", anInteger + 2 );
+//        anInteger++;
     };
     
     counter1();//42
