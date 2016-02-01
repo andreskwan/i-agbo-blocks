@@ -14,12 +14,23 @@ void testMethod() {
      * returns nothing
      * parameters none/void
      */
-    void (^testBlock)(void) = ^{
-        anInteger++;
+    void (^counter1)(void) = ^{
         NSLog(@"\nClosure - Integer is: %d", anInteger);
+        anInteger++;
     };
-    testBlock();
-    NSLog(@"\nInteger value outside the block: %d", anInteger);
+    
+    void (^counter2)(void) = ^{
+        NSLog(@"\nClosure - Integer is: %d", anInteger);
+        anInteger++;
+    };
+    
+    counter1();//42
+    counter1();//43
+    counter1();//44
+    
+    counter2();//45
+    
+    NSLog(@"\nInteger value outside the block: %d", anInteger);//46
 }
 
 int main(int argc, const char * argv[]) {
