@@ -12,6 +12,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 - (IBAction)downloadImage:(UIButton *)sender;
 
-
 @end
 
