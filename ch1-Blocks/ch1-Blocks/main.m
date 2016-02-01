@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+void testMethod() {
+    int anInteger = 42;
+    /* 
+     * returns nothing
+     * parameters none/void
+     */
+    void (^testBlock)(void) = ^{ NSLog(@"\nClosure - Integer is: %d", anInteger); };
+    testBlock();
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
@@ -41,6 +51,9 @@ int main(int argc, const char * argv[]) {
         [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
             NSLog(@"key: %@, value: %@", key, obj);
         }];
+        
+        //testMethod
+        testMethod();
     }
     return 0;
 }
