@@ -13,7 +13,7 @@ int main(int argc, const char * argv[]) {
         // insert code here...
         NSLog(@"Hello, World!");
         // NSArray
-        NSArray *list = @[@1,@2,@3];
+        NSArray *list = @[@1,@2,@3,@4];
         
         //for de C del abuelo
         for (int i = 0; i < [list count]; i++) {
@@ -26,12 +26,21 @@ int main(int argc, const char * argv[]) {
         for (id element in list) {
             NSLog(@"El elemento en la lista es %@", element);
         }
-        
+
         //iterar con bloques
         [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSLog(@"El elemento para el indice %lu en la lista es %@", (unsigned long)idx, obj);
+            if (idx == 1) {
+                *stop = YES;
+                NSLog(@"enumeration stoped");
+            }
         }];
 
+        //NSDictionary
+        NSDictionary *dict = @{@"uno":@1, @"dos":@2};
+        [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            NSLog(@"key: %@, value: %@", key, obj);
+        }];
     }
     return 0;
 }
