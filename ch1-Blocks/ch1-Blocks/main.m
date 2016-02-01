@@ -9,13 +9,17 @@
 #import <Foundation/Foundation.h>
 
 void testMethod() {
-    int anInteger = 42;
+    __block int anInteger = 42;
     /* 
      * returns nothing
      * parameters none/void
      */
-    void (^testBlock)(void) = ^{ NSLog(@"\nClosure - Integer is: %d", anInteger); };
+    void (^testBlock)(void) = ^{
+        anInteger++;
+        NSLog(@"\nClosure - Integer is: %d", anInteger);
+    };
     testBlock();
+    NSLog(@"\nInteger value outside the block: %d", anInteger);
 }
 
 int main(int argc, const char * argv[]) {
