@@ -28,15 +28,17 @@ static NSString * kMarianaDavalosUrl = @"http://landofthefreeish.com/wp-content/
     dispatch_async(gemelas, ^{
         NSURL *url = [NSURL URLWithString:kMarianaDavalosUrl];
         imageData = [NSData dataWithContentsOfURL:url];
+        //UIKit UIImage could be here, problems arise whe we use a UIxxxView
+        image = [UIImage imageWithData:imageData];
         
+        //is not the job of the property set the UIImageView so this must be removed
         //presentar en primer plano o en la cola principal
         dispatch_async(dispatch_get_main_queue(), ^{
-            image = [UIImage imageWithData:imageData];
             self.photoView.image = image;
         });
     });
     // but the image is nil because the execution in the "colaDavalos" thread is completed after this
-    // image has been returned. 
+    // image has been returned.
     return image;
 }
 
