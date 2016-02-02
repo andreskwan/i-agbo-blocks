@@ -13,5 +13,9 @@
 
 - (IBAction)downloadImage:(UIButton *)sender;
 
+// returns - nothing
+// parameter - uiimage - which is returned to the caller
+// completion block
+- (void)imageWith:(void (^)(UIImage *image))completionBlock;
 @end
 

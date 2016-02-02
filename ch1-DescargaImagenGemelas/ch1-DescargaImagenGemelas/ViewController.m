@@ -26,6 +26,31 @@ static NSString * kMarianaDavalosUrl = @"http://landofthefreeish.com/wp-content/
 }
 
 - (IBAction)downloadImage:(UIButton *)sender {
-
+    [self imageWith:^(UIImage *image) {
+        self.photoView.image = image;
+    }];
 }
+
+- (void)imageWith:(void (^)(UIImage *image))completionBlock
+{
+    // descarga imagen en segundo plano
+    // pedirle al sistema si tiene una cola disponible, si no tiene, se crea
+    // para limitar la cantidad de colas
+    dispatch_queue_t download = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_async(download, ^{
+        NSURL *url = [NSURL URLWithString:kMarianaDavalosUrl];
+        NSData *imageData = [NSData dataWithContentsOfURL:url];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // ejecutar el bloque de finalizacion que nos han pasado,
+            // serie de tareas a ser completadas luego de finalizar la ejecucion en segundo plano
+            UIImage *image = [UIImage imageWithData:imageData];
+            // execute the completion block, coulb be anything
+            // another function could pass another logic in the completionBlock
+            completionBlock(image);
+        });
+    });
+}
+
 @end
