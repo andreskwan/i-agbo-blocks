@@ -35,7 +35,9 @@ static NSString * kMarianaDavalosUrl = @"http://landofthefreeish.com/wp-content/
             self.photoView.image = image;
         });
     });
-    return nil;
+    // but the image is nil because the execution in the "colaDavalos" thread is completed after this
+    // image has been returned. 
+    return image;
 }
 
 - (void)viewDidLoad {
