@@ -11,9 +11,6 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 
-//only will have a getter
-@property (strong, nonatomic, readonly) UIImage *davalosImage;
-
 - (IBAction)downloadImage:(UIButton *)sender;
 
 @end

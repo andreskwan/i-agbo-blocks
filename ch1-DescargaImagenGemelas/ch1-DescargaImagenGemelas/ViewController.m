@@ -15,33 +15,6 @@ static NSString * kMarianaDavalosUrl = @"http://landofthefreeish.com/wp-content/
 @end
 
 @implementation ViewController
-- (UIImage *)getDavalosImage {
-    // permitir que se modifique dentro del bloque y quede disponible fuera de el
-    __block NSData *imageData = nil;
-    __block UIImage * image = nil;
-    
-    // crear una cola
-    dispatch_queue_t gemelas = dispatch_queue_create("colaDavalos", 0);
-    
-    // enviar un bloque que se ejecute en 2do plano
-    // esta devuelve inmediatamente, aun cuando no se ha ejecutado, por que pasa a segundo plano
-    dispatch_async(gemelas, ^{
-        NSURL *url = [NSURL URLWithString:kMarianaDavalosUrl];
-        imageData = [NSData dataWithContentsOfURL:url];
-        //UIKit UIImage could be here, problems arise whe we use a UIxxxView
-        image = [UIImage imageWithData:imageData];
-        
-        //is not the job of the property set the UIImageView so this must be removed
-        //presentar en primer plano o en la cola principal
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.photoView.image = image;
-        });
-    });
-    // but the image is nil because the execution in the "colaDavalos" thread is completed after this
-    // image has been returned.
-    return image;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
