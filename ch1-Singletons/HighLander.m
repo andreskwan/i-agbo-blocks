@@ -10,5 +10,26 @@
 
 @implementation HighLander
 
+//crear un methodo de clase
+//defaul
+//standar
+//
+
+
+//instancetype - articulo en cocoamental
++(instancetype) sharedHighLander {
+    // unavez es llamada siempre tendra el mismo valor - statico
+    // es un marcador que se verifica para ver si ya se ejecuto,
+    // si ya se realizo, simplemente retorna
+    static dispatch_once_t onceToken;
+    // solo puede haber uno - Highlinder
+    static HighLander *shared;
+    
+    dispatch_once(&onceToken, ^{
+        //se crea una instacia de la clase que sera almacenada en una var statica
+        shared = [[HighLander alloc]init];
+    });
+    return shared;
+}
 
 @end
