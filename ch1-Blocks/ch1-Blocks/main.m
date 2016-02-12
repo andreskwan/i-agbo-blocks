@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 /*
- Adding a change from develop 
+ change made from master - will generate conflict with develop
  */
 void testMethod() {
     int anInteger = 42;
@@ -36,7 +36,9 @@ void testMethod() {
     
     NSLog(@"\nInteger value outside the block: %d", anInteger);//46
 }
-
+/*
+ change made from master - no conflicts with develop
+ */
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
