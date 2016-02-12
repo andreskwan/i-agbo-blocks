@@ -10,6 +10,7 @@
 /*
  change made from master - will generate conflict with develop
  tomorrow is christmas
+ another commit in master 
  */
 void testMethod() {
     int anInteger = 42;
