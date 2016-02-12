@@ -20,7 +20,9 @@ void testMethod() {
         NSLog(@"\nClosure - Integer is: %d", anInteger + 1);
 //        anInteger++;
     };
-    
+    /*
+     adding another change from develop
+     */    
     void (^counter2)(void) = ^{
         NSLog(@"\nClosure - Integer is: %d", anInteger + 2 );
 //        anInteger++;
