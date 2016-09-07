@@ -13,27 +13,30 @@
  another commit in master
  */
 void testMethod() {
-    int anInteger = 42;
+     int anInteger = 42;
     /* 
      * returns nothing
      * parameters none/void
      */
     void (^counter1)(void) = ^{
-        NSLog(@"\nClosure - Integer is: %d", anInteger + 1);
-//        anInteger++;
+        //don't work because is always set to anInteger value
+        int intBlock1 = anInteger;
+        NSLog(@"\nClosure - 1 - Integer is: %d", intBlock1 );
+        intBlock1 += 1;
     };
     
     void (^counter2)(void) = ^{
-        NSLog(@"\nClosure - Integer is: %d", anInteger + 2 );
-//        anInteger++;
+        NSLog(@"\nClosure - 2 - Integer is: %d", anInteger + 1);
+      //  anInteger++;
     };
     
     counter1();//42
     counter1();//43
     counter1();//44
     
+    //45 because of __block int anInteger
     counter2();//45
-    
+
     NSLog(@"\nInteger value outside the block: %d", anInteger);//46
 }
 /*
