@@ -54,6 +54,7 @@ int main(int argc, const char * argv[]) {
             NSLog(@"Para el index(int): %d el valor retornado es %ld", i, (long)[[list objectAtIndex:i] integerValue]);
         }
         
+        ///////////////////////////////
         //fast iteration
         //es el mas rapido
         //id (no se el tipo de lo que esta dentro del array
@@ -61,8 +62,17 @@ int main(int argc, const char * argv[]) {
             NSLog(@"El elemento en la lista es %@", element);
         }
 
+        ///////////////////////////////
         //iterar con bloques
         [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSLog(@"El elemento para el indice %lu en la lista es %@", (unsigned long)idx, obj);
+            if (idx == 1) {
+                *stop = YES;
+                NSLog(@"enumeration stoped");
+            }
+        }];
+        
+        [list enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL * stop) {
             NSLog(@"El elemento para el indice %lu en la lista es %@", (unsigned long)idx, obj);
             if (idx == 1) {
                 *stop = YES;
