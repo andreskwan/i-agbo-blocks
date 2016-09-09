@@ -16,6 +16,32 @@ static NSString * kMarianaDavalosUrl = @"https://pixabay.com/static/uploads/phot
 @end
 
 @implementation ViewController
+
+//typedef
+typedef void (^kCompletionBlock)(UIImage *image);
+
+-(UIImage *) imageDownloadedInSetter {
+    // descarga imagen en segundo plano
+    // pedirle al sistema si tiene una cola disponible, si no tiene, se crea
+    // para limitar la cantidad de colas
+    // dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_queue_t queueForDownload = dispatch_queue_create("queueLabelForDownload", 0);
+    
+    __block UIImage * image = nil;
+    __block NSData * imageData = nil;
+    
+    dispatch_async(queueForDownload, ^{
+        NSURL *url = [NSURL URLWithString:kMarianaDavalosUrl];
+        imageData = [NSData dataWithContentsOfURL:url];
+        //UIImage is the only UIKit member that can be executed in a thread different than
+        // the main thread
+        image = [UIImage imageWithData:imageData];
+    });
+    
+    //Always return nil because dispatch_async returns immediately
+    return image;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -43,6 +69,7 @@ static NSString * kMarianaDavalosUrl = @"https://pixabay.com/static/uploads/phot
     // para limitar la cantidad de colas
     // dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_queue_t queueForDownload = dispatch_queue_create("queueLabelForDownload", 0);
+    
     __block UIImage * image = nil;
     __block NSData * imageData = nil;
     

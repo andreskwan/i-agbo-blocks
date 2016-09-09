@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
+@property (strong, nonatomic, readonly) UIImage *imageDownloadedInSetter;
 
 - (IBAction)downloadImage:(UIButton *)sender;
 
