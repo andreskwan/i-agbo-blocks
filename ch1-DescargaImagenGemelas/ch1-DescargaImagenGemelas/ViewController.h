@@ -10,13 +10,14 @@
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
-@property (strong, nonatomic, readonly) UIImage *imageDownloadedInSetter;
 
 - (IBAction)downloadImage:(UIButton *)sender;
 
 // returns - nothing
-// parameter - uiimage - which is returned to the caller
+// parameter - is a block
 // completion block
+
+// - (void)aMethodWithBlock:(returnType (^)(parameters))nameOfTheCompletitionBlock;
 - (void)imageWith:(void (^)(UIImage *image))completionBlock;
 @end
 
