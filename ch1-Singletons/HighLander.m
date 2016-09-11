@@ -23,6 +23,7 @@
     // si ya se realizo, simplemente retorna
     static dispatch_once_t onceToken;
     // solo puede haber uno - Highlinder
+    // defaul, shared or standar
     static HighLander *shared;
     
     dispatch_once(&onceToken, ^{

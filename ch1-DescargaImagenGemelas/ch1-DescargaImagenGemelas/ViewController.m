@@ -36,7 +36,11 @@ typedef void (^kCompletionBlock)(UIImage *image);
     }];
 }
 
-/*
+//leave it ready to use
+extern uint64_t dispatch_benchmark(size_t count, void (^block)(void));
+
+
+    /*
  parameter should be URL
  return: in a completion block
  */
@@ -51,25 +55,27 @@ typedef void (^kCompletionBlock)(UIImage *image);
     // OS tienes una cola que pueda re utilizar?
     // con prioridad por defecto
     dispatch_queue_t queueForDownload = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-
+    
     dispatch_async(queueForDownload, ^{
         NSURL *url = [NSURL URLWithString:kMarianaDavalosUrl];
         NSData *imageData = [NSData dataWithContentsOfURL:url];
         
         //call the main tread to present UIKit content
         dispatch_async(dispatch_get_main_queue(), ^{
-            // ejecutar el bloque de finalizacion que nos han pasado,
-            // serie de tareas a ser completadas luego de finalizar la ejecucion en segundo plano
-            UIImage *image = [UIImage imageWithData:imageData];
-            
-            // 2 ejecutar el bloque de finalizacion en la cola principal
-            // continuation
-            // how to return and where
-            // execute the completion block, coulb be anything
-            // another function could pass another logic in the completionBlock
-            completionBlock(image);
+            uint64_t t = dispatch_benchmark(1, ^{
+                // ejecutar el bloque de finalizacion que nos han pasado,
+                // serie de tareas a ser completadas luego de finalizar la ejecucion en segundo plano
+                UIImage *image = [UIImage imageWithData:imageData];
+                
+                // 2 ejecutar el bloque de finalizacion en la cola principal
+                // continuation
+                // how to return and where
+                // execute the completion block, coulb be anything
+                // another function could pass another logic in the completionBlock
+                completionBlock(image);
+            });
+            NSLog(@"Migration took %lluns", t);
         });
     });
 }
-
 @end
