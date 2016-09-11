@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 
 - (IBAction)downloadImage:(UIButton *)sender;
 
@@ -19,5 +20,6 @@
 
 // - (void)aMethodWithBlock:(returnType (^)(parameters))nameOfTheCompletitionBlock;
 - (void)imageWith:(void (^)(UIImage *image))completionBlock;
+
 @end
 

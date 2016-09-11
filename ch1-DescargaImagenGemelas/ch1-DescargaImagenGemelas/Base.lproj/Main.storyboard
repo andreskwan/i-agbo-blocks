@@ -36,18 +36,25 @@
                                     <action selector="downloadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wTd-kK-0ny"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tZz-as-0Eo">
+                                <rect key="frame" x="142" y="266" width="37" height="37"/>
+                                <color key="color" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="lb9-e4-bRL" secondAttribute="trailing" id="2AY-gp-sjd"/>
                             <constraint firstItem="2ID-3x-eDb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7rS-qF-Gb6"/>
+                            <constraint firstItem="tZz-as-0Eo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Ao-U6-M9q"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lb9-e4-bRL" secondAttribute="bottom" id="NhU-r1-aNN"/>
                             <constraint firstItem="lb9-e4-bRL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Sb2-pF-YG7"/>
+                            <constraint firstItem="tZz-as-0Eo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iAg-cl-PJU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2ID-3x-eDb" secondAttribute="bottom" constant="8" symbolic="YES" id="rQ9-5M-87c"/>
                             <constraint firstItem="lb9-e4-bRL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y4H-hN-a6H"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityView" destination="tZz-as-0Eo" id="u1f-Yz-z8g"/>
                         <outlet property="photoView" destination="lb9-e4-bRL" id="wWe-NW-flO"/>
                     </connections>
                 </viewController>

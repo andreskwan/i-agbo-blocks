@@ -12,7 +12,7 @@
 static NSString * kMarianaDavalosUrl = @"https://pixabay.com/static/uploads/photo/2016/08/19/18/50/fruit-1605921_960_720.jpg";
 
 @interface ViewController ()
-
+@property (nonatomic, strong) NSOperationQueue *queue;
 @end
 
 @implementation ViewController
@@ -31,16 +31,28 @@ typedef void (^kCompletionBlock)(UIImage *image);
 }
 
 - (IBAction)downloadImage:(UIButton *)sender {
-    [self imageWith:^(UIImage *image) {
-        self.photoView.image = image;
-    }];
+
+    // preparar la interfaz - indicar que se esta ejecuta ndo una tarea
+    
+    // crear las operaciones
+    
+    // enlazar las operaciones
+    
+    // enviarlas a la cola
+
+/*
+ GCD - commented
+ */
+//    [self imageWith:^(UIImage *image) {
+//        self.photoView.image = image;
+//    }];
 }
 
 //leave it ready to use
 extern uint64_t dispatch_benchmark(size_t count, void (^block)(void));
 
 
-    /*
+/*
  parameter should be URL
  return: in a completion block
  */
