@@ -13,6 +13,7 @@
 		EA3118441C5F7E5F0074D7ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA3118421C5F7E5F0074D7ED /* Main.storyboard */; };
 		EA3118461C5F7E5F0074D7ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3118451C5F7E5F0074D7ED /* Assets.xcassets */; };
 		EA3118491C5F7E5F0074D7ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA3118471C5F7E5F0074D7ED /* LaunchScreen.storyboard */; };
+		EA8AE8351D85B93E00103483 /* AKOImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8AE8341D85B93E00103483 /* AKOImageDownloader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		EA3118451C5F7E5F0074D7ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA3118481C5F7E5F0074D7ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA31184A1C5F7E5F0074D7ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA8AE8331D85B93E00103483 /* AKOImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKOImageDownloader.h; path = Operations/AKOImageDownloader.h; sourceTree = "<group>"; };
+		EA8AE8341D85B93E00103483 /* AKOImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKOImageDownloader.m; path = Operations/AKOImageDownloader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		EA3118381C5F7E5F0074D7ED /* ch1-DescargaImagenGemelas */ = {
 			isa = PBXGroup;
 			children = (
+				EA8AE8321D85B8DD00103483 /* Operartions */,
 				EA31183C1C5F7E5F0074D7ED /* AppDelegate.h */,
 				EA31183D1C5F7E5F0074D7ED /* AppDelegate.m */,
 				EA31183F1C5F7E5F0074D7ED /* ViewController.h */,
@@ -77,6 +81,15 @@
 				EA31183A1C5F7E5F0074D7ED /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA8AE8321D85B8DD00103483 /* Operartions */ = {
+			isa = PBXGroup;
+			children = (
+				EA8AE8331D85B93E00103483 /* AKOImageDownloader.h */,
+				EA8AE8341D85B93E00103483 /* AKOImageDownloader.m */,
+			);
+			name = Operartions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8AE8351D85B93E00103483 /* AKOImageDownloader.m in Sources */,
 				EA3118411C5F7E5F0074D7ED /* ViewController.m in Sources */,
 				EA31183E1C5F7E5F0074D7ED /* AppDelegate.m in Sources */,
 				EA31183B1C5F7E5F0074D7ED /* main.m in Sources */,
