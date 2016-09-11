@@ -6,7 +6,8 @@
 //  Copyright © 2016 Kwan-abgo-jedy. All rights reserved.
 //
 
-#import "AKOImageDownloader.h"
+#import "AKOImageDownloader.h" 
+
 static NSString * kMarianaDavalosUrl = @"https://pixabay.com/static/uploads/photo/2016/08/19/18/50/fruit-1605921_960_720.jpg";
 
 @interface AKOImageDownloader ()
@@ -17,7 +18,7 @@ static NSString * kMarianaDavalosUrl = @"https://pixabay.com/static/uploads/phot
 
 -(id) initWithImageViewController:(ViewController *) vc {
     if (self = [super init]) {
-        self.imageVC = vc;
+        _imageVC = vc;
     }
     return self;
 }

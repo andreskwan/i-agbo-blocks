@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "AKOImageDownloader.h"
+
 #define DAVALOS_URL @"http://cdn.playbuzz.com/cdn/47169acc-3907-48cb-88fb-c13f98a556ad/52405eb3-f4d7-4ce1-93d0-d0c807bd9764.jpg"
 // @"http://landofthefreeish.com/wp-content/uploads/2011/03/mariana-davalos-maxim-07.jpg";
 static NSString * kMarianaDavalosUrl = @"https://pixabay.com/static/uploads/photo/2016/08/19/18/50/fruit-1605921_960_720.jpg";
@@ -23,6 +25,7 @@ typedef void (^kCompletionBlock)(UIImage *image);
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.queue = [[NSOperationQueue alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,11 +37,14 @@ typedef void (^kCompletionBlock)(UIImage *image);
 
     // preparar la interfaz - indicar que se esta ejecuta ndo una tarea
     [self.activityView startAnimating];
-    // crear las operaciones
+    
+    // crear las operaciones o instanciarlas
+    AKOImageDownloader *downloadOperation = [[AKOImageDownloader alloc]initWithImageViewController:self];
     
     // enlazar las operaciones
     
     // enviarlas a la cola
+    [self.queue addOperation:downloadOperation];
 
 /*
  GCD - commented
