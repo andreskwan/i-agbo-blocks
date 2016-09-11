@@ -31,8 +31,13 @@ static NSString * kMarianaDavalosUrl = @"https://pixabay.com/static/uploads/phot
     //actualizar interface del VC
     //pero esto debe ejecutarse en primer plano
     //main va en segundo plano
-    self.imageVC.photoView.image = image;
+//    self.imageVC.photoView.image = image;
     
+    //we avoid to use blocks here
+    //that is why we use performSelectorOnMainThread
+    [self performSelectorOnMainThread:@selector(updateViewControllerWithImage:)
+                           withObject:image
+                        waitUntilDone:NO];
 }
 
 -(void) updateViewControllerWithImage: (UIImage *) image {
