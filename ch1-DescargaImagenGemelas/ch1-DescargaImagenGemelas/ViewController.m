@@ -33,7 +33,7 @@ typedef void (^kCompletionBlock)(UIImage *image);
 - (IBAction)downloadImage:(UIButton *)sender {
 
     // preparar la interfaz - indicar que se esta ejecuta ndo una tarea
-    
+    [self.activityView startAnimating];
     // crear las operaciones
     
     // enlazar las operaciones
