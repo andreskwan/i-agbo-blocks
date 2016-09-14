@@ -23,4 +23,27 @@
     }
     return self;
 }
+
+-(void) updateViewControllerBeforeBackground{
+    
+}
+
+-(void) updateViewControllerAfterBackgroundWithImage:(UIImage *)image {
+    
+}
+
+-(void) main {
+    
+    // crear un contexto
+    
+    // Creamos una CIIMage
+    
+    // Creamos un filtro de UIColor
+    
+    // Creamos una imagen de salida
+    
+    // Generamos la image de salida
+    
+    // Actualizamos en primer plano
+}
 @end
