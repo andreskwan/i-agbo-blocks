@@ -9,6 +9,8 @@
 #import "AKOImageFilter.h"
 #import "ViewController.h"
 
+@import CoreImage;
+
 @interface AKOImageFilter ()
 @property (nonatomic, strong) ViewController * mainVC;
 @end
@@ -39,10 +41,12 @@
                         waitUntilDone:NO];
     
     // crear un contexto
+    CIContext *context = [CIContext contextWithOptions:nil];
     
     // Creamos una CIIMage
+    CIImage *image = [CIImage imageWithCGImage:self.mainVC.photoView.image.CGImage];
     
-    // Creamos un filtro de UIColor
+    // Creamos un filtro de UIColor    
     
     // Creamos una imagen de salida
     
