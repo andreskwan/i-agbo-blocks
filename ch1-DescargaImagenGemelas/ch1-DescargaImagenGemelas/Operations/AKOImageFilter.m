@@ -33,6 +33,10 @@
 }
 
 -(void) main {
+    // Actualizamos en main thread
+    [self performSelectorOnMainThread:@selector(updateViewControllerBeforeBackground)
+                           withObject:nil
+                        waitUntilDone:NO];
     
     // crear un contexto
     
@@ -44,6 +48,10 @@
     
     // Generamos la image de salida
     
-    // Actualizamos en primer plano
+    // Actualizamos en main thread
+    [self performSelectorOnMainThread:@selector(updateViewControllerAfterBackgroundWithImage:)
+                           withObject:image
+                        waitUntilDone:NO];
+    
 }
 @end
