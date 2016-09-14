@@ -15,4 +15,12 @@
 
 @implementation AKOImageFilter
 
+- (id)initWithImageViewController: (ViewController *)vc
+{
+    self = [super init];
+    if (self) {
+        _mainVC = vc;
+    }
+    return self;
+}
 @end
