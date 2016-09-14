@@ -46,16 +46,26 @@
     // Creamos una CIIMage
     CIImage *image = [CIImage imageWithCGImage:self.mainVC.photoView.image.CGImage];
     
-    // Creamos un filtro de UIColor    
+    // Creamos un filtro de color
+    CIFilter *falseColor = [CIFilter filterWithName:@"CIFalseColor"];
+    [falseColor setDefaults];
+    [falseColor setValue:image
+                  forKey:kCIInputImageKey];
     
     // Creamos una imagen de salida
+    CIImage *output = falseColor.outputImage;
     
     // Generamos la image de salida
+    CGImageRef res = [context createCGImage:output
+                                   fromRect:[output extent]];
     
     // Actualizamos en main thread
     [self performSelectorOnMainThread:@selector(updateViewControllerAfterBackgroundWithImage:)
                            withObject:image
                         waitUntilDone:NO];
+    
+    // Liberar la CGImageRef
+    CGImageRelease(res);
     
 }
 @end
