@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ViewController.h"
 
 @interface AKOImageFilter : NSOperation
+- (id)initWithImageViewController: (ViewController *)vc;
 
 @end

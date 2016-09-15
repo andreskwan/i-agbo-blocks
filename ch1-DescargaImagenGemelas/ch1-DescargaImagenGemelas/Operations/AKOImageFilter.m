@@ -7,7 +7,7 @@
 //
 
 #import "AKOImageFilter.h"
-#import "ViewController.h"
+
 
 @import CoreImage;
 
