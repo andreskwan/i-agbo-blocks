@@ -41,14 +41,15 @@ typedef void (^kCompletionBlock)(UIImage *image);
     
     // crear las operaciones o instanciarlas
     AKOImageDownloader *downloadOperation = [[AKOImageDownloader alloc]initWithImageViewController:self];
-    AKOImageFilter *filter = [[AKOImageFilter alloc] initWithImageViewController:self];
+    AKOImageFilter *filterOperation = [[AKOImageFilter alloc] initWithImageViewController:self];
     
     // enlazar las operaciones
     // no ejecutar el filter hasta que download se ejecute
-    [filter addDependency:downloadOperation];
+    [filterOperation addDependency:downloadOperation];
     
     // enviarlas a la cola
     [self.queue addOperation:downloadOperation];
+    [self.queue addOperation:filterOperation];
 
 /*
  GCD - commented
