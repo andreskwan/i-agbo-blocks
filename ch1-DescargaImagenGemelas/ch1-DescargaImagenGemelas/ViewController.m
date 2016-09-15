@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AKOImageDownloader.h"
+#import "AKOImageFilter.h"
 
 #define DAVALOS_URL @"http://cdn.playbuzz.com/cdn/47169acc-3907-48cb-88fb-c13f98a556ad/52405eb3-f4d7-4ce1-93d0-d0c807bd9764.jpg"
 // @"http://landofthefreeish.com/wp-content/uploads/2011/03/mariana-davalos-maxim-07.jpg";
@@ -40,6 +41,7 @@ typedef void (^kCompletionBlock)(UIImage *image);
     
     // crear las operaciones o instanciarlas
     AKOImageDownloader *downloadOperation = [[AKOImageDownloader alloc]initWithImageViewController:self];
+    AKOImageFilter *filter = [[AKOImageFilter alloc] initWithImageViewController:self];
     
     // enlazar las operaciones
     
