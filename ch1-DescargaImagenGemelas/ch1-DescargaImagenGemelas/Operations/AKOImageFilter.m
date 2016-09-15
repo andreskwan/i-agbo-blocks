@@ -27,11 +27,12 @@
 }
 
 -(void) updateViewControllerBeforeBackground{
-    
+    [self.imageVC.activityView startAnimating];
 }
 
 -(void) updateViewControllerAfterBackgroundWithImage:(UIImage *)image {
-    
+    self.imageVC.photoView.image = image;
+    [self.imageVC.activityView stopAnimating];
 }
 
 -(void) main {
