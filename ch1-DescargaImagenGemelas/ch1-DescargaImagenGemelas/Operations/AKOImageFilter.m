@@ -56,10 +56,17 @@
     // Creamos filtro de viñeta
     CIFilter *vignette = [CIFilter filterWithName:@"CIVignette"];
     [vignette setDefaults];
-    [vignette setValue:@10 forKey:kCIInputIntensityKey];
+    [vignette setValue:@30
+                forKey:kCIInputIntensityKey];
     
-    // Creamos una imagen de salida
+    // Creamos una imagen de salida para el falseColor filter
     CIImage *output = falseColor.outputImage;
+    
+    // encadenar los filtros
+    [vignette setValue:output forKey:kCIInputImageKey];
+    
+    // ahora se necesita una referencia a la salida del sugundo filtro
+    output = vignette.outputImage;
     
     // Generamos la image de salida
     CGImageRef res = [context createCGImage:output
