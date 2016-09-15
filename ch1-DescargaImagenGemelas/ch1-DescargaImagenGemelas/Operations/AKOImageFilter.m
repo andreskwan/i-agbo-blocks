@@ -62,7 +62,7 @@
     
     // Actualizamos en main thread
     [self performSelectorOnMainThread:@selector(updateViewControllerAfterBackgroundWithImage:)
-                           withObject:image
+                           withObject:[UIImage imageWithCGImage:res]
                         waitUntilDone:NO];
     
     // Liberar la CGImageRef
