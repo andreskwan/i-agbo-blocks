@@ -12,7 +12,7 @@
 @import CoreImage;
 
 @interface AKOImageFilter ()
-@property (nonatomic, strong) ViewController * mainVC;
+@property (nonatomic, strong) ViewController * imageVC;
 @end
 
 @implementation AKOImageFilter
@@ -21,7 +21,7 @@
 {
     self = [super init];
     if (self) {
-        _mainVC = vc;
+        _imageVC = vc;
     }
     return self;
 }
@@ -44,7 +44,7 @@
     CIContext *context = [CIContext contextWithOptions:nil];
     
     // Creamos una CIIMage
-    CIImage *image = [CIImage imageWithCGImage:self.mainVC.photoView.image.CGImage];
+    CIImage *image = [CIImage imageWithCGImage:self.imageVC.photoView.image.CGImage];
     
     // Creamos un filtro de color
     CIFilter *falseColor = [CIFilter filterWithName:@"CIFalseColor"];
