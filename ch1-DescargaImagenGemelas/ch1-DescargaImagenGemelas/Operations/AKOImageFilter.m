@@ -53,6 +53,11 @@
     [falseColor setValue:image
                   forKey:kCIInputImageKey];
     
+    // Creamos filtro de viñeta
+    CIFilter *vignette = [CIFilter filterWithName:@"CIVignette"];
+    [vignette setDefaults];
+    [vignette setValue:@10 forKey:kCIInputIntensityKey];
+    
     // Creamos una imagen de salida
     CIImage *output = falseColor.outputImage;
     
